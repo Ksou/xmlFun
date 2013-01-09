@@ -1,0 +1,21 @@
+<Alloy>
+	<TabGroup>
+		<Tab title="Tab 1" icon="KS_nav_ui.png">
+			<Window title="Tab 1">
+				<Label>I am Window 1</Label>
+			</Window>
+		</Tab>
+		<Tab title="Tab 2" icon="KS_nav_views.png">
+			<Require src="MusicMain"/>
+			
+
+		</Tab>
+		
+		<Tab title="About" icon="KS_nav_views.png">
+		
+			<Require src="About"/>
+			
+
+		</Tab>
+	</TabGroup>
+</Alloy>

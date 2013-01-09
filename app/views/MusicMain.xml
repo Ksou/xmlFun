@@ -1,0 +1,11 @@
+<Alloy>
+	
+	
+			<Window title="MusicMain" id = 'MW' onFocus ="Start">
+				<Button onClick = "GenTable" top = "40"> </Button>
+				<Label>Here we're going to show the table view '</Label>
+				<TextField id= 'Search'  width = '60' hintText = " Search Here "  top = "30">Search Here</TextField>
+				<!-- Pushed down to help with debuging -->
+			</Window>
+	
+</Alloy>

@@ -1,6 +1,7 @@
 /// so important it has to be a comment in the code 
 /// http://developer.appcelerator.com/blog/2012/11/gtka-two.html
 //var MW =  Alloy.Globals.TempWin ; 
+/*
 function PostLayout(){
 // 
 	 //	var MW =  Alloy.Globals.TempWin ; 
@@ -21,7 +22,7 @@ function NavButton(e){
 //alert(e.title) ; 
 	}
 	
-}
+}*/
 
 function Look(){
 var LocText =	Alloy.Globals.SearchTerm ;
@@ -63,6 +64,7 @@ var stringTest  =  Alloy.Globals.GotData[1].id ;
 
 // have to export this first, from Arron's SimpleAlloy App example 
 exports.openMainWindow = function(_tab) {
+	// when we open we run the Look search function too 
   _tab.open($.MusicTable);
   Look();
 }

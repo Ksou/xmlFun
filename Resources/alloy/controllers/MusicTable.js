@@ -1,14 +1,4 @@
 function Controller() {
-    function PostLayout() {
-        Look();
-    }
-    function ButtonSetUp() {
-        MW.setRightNavButton($.InfoButton);
-        MW.setLeftNavButton($.BackButton);
-    }
-    function NavButton(e) {
-        !Alloy.Globals.Debug;
-    }
     function Look() {
         var LocText = Alloy.Globals.SearchTerm;
         Alloy.Globals.Debug && alert(LocText);

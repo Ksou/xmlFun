@@ -38,8 +38,10 @@ var LocTable = $.Table ;
 	DataGet.TableData(LocText,LocTable,AddListener);
 	
 }
+
 function AddListener(GotData){
-	//
+	//alert(GotData[2].id) ; 
+	// this doesn't work in a callback , 
 	//var stringTest = " " + data[1].name ; 
 	if(Alloy.Globals.Debug){
 	alert('did we callback');
@@ -50,16 +52,35 @@ var stringTest  =  Alloy.Globals.GotData[1].id ;
 // Not 100% sure why sending it to a global and grabing it here works , but sending it as a argument to our callback function doesn't 
 //GotData[1].id 	//Alloy.Globals.GotData[1].id ;
 	alert(stringTest) ; 
+	
 	}
 	
+	
 	$.Table.addEventListener('click', function(e){
-	alert(Alloy.Globals.GotData[e.index].name ) ; 
-		
+	alert(Alloy.Globals.GotData[e.index].name + 'PlayBack will end when this window closes ') ; 
+	//var RowPlay = 
+	var ID = Alloy.Globals.GotData[e.index].id ;
+	if( Ti.Platform.osname == 'android'|| Ti.Platform.osname == 'iphone' || Ti.Platform.osname == 'ipad' ){
+	SongPlay(ID);
+	}
 	});
 	
 	
 	
 	
+}//var old ; // this just makes sure we don't play 2 songs at once 
+function  SongPlay(id){
+	
+	
+	if(Alloy.Globals.SongActive){
+		
+		Alloy.Globals.SongActive.stop();
+	}
+	//var tempString =  data[e.index].id;
+ var Sounder = 'http://storage-new.newjamendo.com/download/track/'+id+'/mp32';
+Alloy.Globals.SongActive = Ti.Media.createAudioPlayer({url : Sounder});
+		Alloy.Globals.SongActive.play() ;
+		
 }
 
 // have to export this first, from Arron's SimpleAlloy App example 

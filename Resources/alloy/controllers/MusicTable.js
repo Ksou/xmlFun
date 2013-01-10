@@ -7,7 +7,7 @@ function Controller() {
         MW.setLeftNavButton($.BackButton);
     }
     function NavButton(e) {
-        Alloy.Globals.Debug && alert(e.title);
+        !Alloy.Globals.Debug;
     }
     function Look() {
         var LocText = Alloy.Globals.SearchTerm;
@@ -19,11 +19,11 @@ function Controller() {
     function AddListener(GotData) {
         if (Alloy.Globals.Debug) {
             alert("did we callback");
-            var LocData = Alloy.Globals.GotData, stringTest = Alloy.Globals.GotData[1].id;
+            var stringTest = Alloy.Globals.GotData[1].id;
             alert(stringTest);
         }
         $.Table.addEventListener("click", function(e) {
-            alert(LocData[e.index].name);
+            alert(Alloy.Globals.GotData[e.index].name);
         });
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));

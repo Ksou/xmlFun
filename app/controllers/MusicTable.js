@@ -18,7 +18,7 @@ MW.setLeftNavButton($.BackButton) ;
 
 function NavButton(e){
 	if(Alloy.Globals.Debug){
-alert(e.title) ; 
+//alert(e.title) ; 
 	}
 	
 }
@@ -42,15 +42,17 @@ function AddListener(GotData){
 	//var stringTest = " " + data[1].name ; 
 	if(Alloy.Globals.Debug){
 	alert('did we callback');
-	var LocData = Alloy.Globals.GotData ; 
+	//var LocData = Alloy.Globals.GotData ; 
+	
 var stringTest  =  Alloy.Globals.GotData[1].id ;
+
 // Not 100% sure why sending it to a global and grabing it here works , but sending it as a argument to our callback function doesn't 
 //GotData[1].id 	//Alloy.Globals.GotData[1].id ;
 	alert(stringTest) ; 
 	}
 	
 	$.Table.addEventListener('click', function(e){
-	alert(LocData[e.index].name ) ; 
+	alert(Alloy.Globals.GotData[e.index].name ) ; 
 		
 	});
 	

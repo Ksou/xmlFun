@@ -14,7 +14,7 @@ function Controller() {
     var $ = this, exports = {}, __defers = {};
     $.__views.MW = A$(Ti.UI.createWindow({
         backgroundColor: "#fff",
-        title: "MusicMain",
+        title: "Music Search",
         id: "MW"
     }), "Window", null);
     $.addTopLevelView($.__views.MW);
@@ -36,7 +36,7 @@ function Controller() {
             fontFamily: "Helvetica Neue"
         },
         textAlign: "center",
-        text: "Here we're going to show the table view '",
+        text: "Here we search for music",
         id: "__alloyId8"
     }), "Label", $.__views.MW);
     $.__views.MW.add($.__views.__alloyId8);

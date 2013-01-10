@@ -29,7 +29,7 @@ function Controller() {
             fontFamily: "Helvetica Neue"
         },
         textAlign: "center",
-        text: "I am Window 1",
+        text: "Debug Switch , set this to on to see debug alerts .",
         id: "__alloyId4"
     }), "Label", $.__views.__alloyId3);
     $.__views.__alloyId3.add($.__views.__alloyId4);

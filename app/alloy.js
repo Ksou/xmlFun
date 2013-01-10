@@ -10,7 +10,7 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 Alloy.Globals.SearchTerm = 'none' ;
-// don't need Temp Win and Tab2 anymore, will look though source code to make sure its not still referenced any more
+// don't need Temp Win anymore , and will put in fix for Tab2( don't like too many globals ) soon , will look though source code to make sure its not still referenced any more
 Alloy.Globals.TempWin ; 
 
 Alloy.Globals.Tab2 ;

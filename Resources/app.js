@@ -6,4 +6,8 @@ Alloy.Globals.TempWin;
 
 Alloy.Globals.Tab2;
 
+Alloy.Globals.GotData;
+
+Alloy.Globals.Debug;
+
 Alloy.createController("index");

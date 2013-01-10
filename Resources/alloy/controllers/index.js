@@ -1,7 +1,11 @@
 function Controller() {
     function onOpen() {
         Alloy.Globals.Tab2 = $.Tab2;
-        alert(Alloy.Globals.Tab2.title);
+        Alloy.Globals.Debug = !0;
+        Alloy.Globals.Debug && (Alloy.Globals.Tab2 = $.Tab2);
+    }
+    function onChange() {
+        Alloy.Globals.Debug = $.DebugSwitch.value;
     }
     function Start() {}
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
@@ -29,6 +33,14 @@ function Controller() {
         id: "__alloyId4"
     }), "Label", $.__views.__alloyId3);
     $.__views.__alloyId3.add($.__views.__alloyId4);
+    $.__views.DebugSwitch = A$(Ti.UI.createSwitch({
+        id: "DebugSwitch",
+        value: "true",
+        title: "Debug",
+        top: "240"
+    }), "Switch", $.__views.__alloyId3);
+    $.__views.__alloyId3.add($.__views.DebugSwitch);
+    onChange ? $.__views.DebugSwitch.on("change", onChange) : __defers["$.__views.DebugSwitch!change!onChange"] = !0;
     $.__views.Tab1 = A$(Ti.UI.createTab({
         window: $.__views.__alloyId3,
         title: "Tab 1",
@@ -65,6 +77,7 @@ function Controller() {
     _.extend($, $.__views);
     $.index.open();
     __defers["$.__views.__alloyId3!open!onOpen"] && $.__views.__alloyId3.on("open", onOpen);
+    __defers["$.__views.DebugSwitch!change!onChange"] && $.__views.DebugSwitch.on("change", onChange);
     _.extend($, exports);
 }
 

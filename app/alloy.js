@@ -10,6 +10,12 @@
 //
 // Alloy.Globals.someGlobalFunction = function(){};
 Alloy.Globals.SearchTerm = 'none' ;
+// don't need Temp Win and Tab2 anymore, will look though source code to make sure its not still referenced any more
 Alloy.Globals.TempWin ; 
+
 Alloy.Globals.Tab2 ;
+Alloy.Globals.GotData ;
+Alloy.Globals.Debug ;
+// for now I want to see every alert message  
+// this is so we can access our JSON data latter, 
 // so we can access this from anywhere 

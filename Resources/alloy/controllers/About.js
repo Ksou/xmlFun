@@ -26,7 +26,7 @@ function Controller() {
             fontFamily: "Helvetica Neue"
         },
         textAlign: "center",
-        text: "Ohh snaps \n					Does this save the formating too , \n					I guess I'd still want to \n					use a function to actually load2\n					\n					text in here, but this is pretty epic .",
+        text: "This is a music player built in the Alloy framework",
         id: "__alloyId1"
     }), "Label", $.__views.__alloyId0);
     $.__views.__alloyId0.add($.__views.__alloyId1);

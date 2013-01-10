@@ -4,14 +4,7 @@
 			<Window title="About" id = 'About' >
 				<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="80%" width="80%">
 				<Label>
-					Ohh snaps 
-					Does this save the formating too , 
-					I guess I'd still want to 
-					use a function to actually load2
-					
-					text in here, but this is pretty epic .
-					
-					
+				This is a music player built in the Alloy framework 
 					</Label>
 				</ScrollView>
 			</Window>

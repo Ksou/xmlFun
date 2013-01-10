@@ -1,8 +1,8 @@
 <Alloy>
 	<Window title = "MusicTable" id  = 'MusicTable'>
 
-				<TableView id = "Table" onClick = "RestoreSearch" onPostayout = 'PostLayout'>
-					 <TableViewRow title="Apple"/>
+				<TableView id = "Table" >
+					
 					
 					</TableView>
 

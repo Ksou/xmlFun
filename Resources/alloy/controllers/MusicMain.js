@@ -1,17 +1,12 @@
 function Controller() {
-    function Awake() {}
-    function Start() {
-        !RanOnce;
-        RanOnce = !0;
-    }
     function GenTable() {
         Alloy.Globals.SearchTerm = $.Search.value;
-        alert("Look For : " + $.Search.value);
-        var allChildren = $.MW.getChildren();
-        for (var i = 0; i < allChildren.length; i++) allChildren[i].visible = !1;
+        Alloy.Globals.Debug && alert("Look For : " + $.Search.value);
         var NewTable = Alloy.createController("MusicTable");
-        alert(Alloy.Globals.Tab2.title);
-        alert(Alloy.Globals.Tab2);
+        if (Alloy.Globals.Debug) {
+            alert(Alloy.Globals.Tab2.title);
+            alert(Alloy.Globals.Tab2);
+        }
         NewTable.openMainWindow(Alloy.Globals.Tab2);
     }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
@@ -23,10 +18,9 @@ function Controller() {
         id: "MW"
     }), "Window", null);
     $.addTopLevelView($.__views.MW);
-    Start ? $.__views.MW.on("focus", Start) : __defers["$.__views.MW!focus!Start"] = !0;
     $.__views.__alloyId7 = A$(Ti.UI.createButton({
         title: "Search",
-        top: "200",
+        top: "230",
         width: "100",
         height: "100",
         id: "__alloyId7"
@@ -55,8 +49,6 @@ function Controller() {
     $.__views.MW.add($.__views.Search);
     exports.destroy = function() {};
     _.extend($, $.__views);
-    var RanOnce = !1;
-    __defers["$.__views.MW!focus!Start"] && $.__views.MW.on("focus", Start);
     __defers["$.__views.__alloyId7!click!GenTable"] && $.__views.__alloyId7.on("click", GenTable);
     _.extend($, exports);
 }

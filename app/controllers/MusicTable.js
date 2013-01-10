@@ -1,10 +1,24 @@
 /// so important it has to be a comment in the code 
 /// http://developer.appcelerator.com/blog/2012/11/gtka-two.html
-function Awake(){
-// call this on app start 	
+var MW =  Alloy.Globals.TempWin ; 
+function PostLayout(){
+// 
+	 //	var MW =  Alloy.Globals.TempWin ; 
 	Look();
+	ButtonSetUp();
+}
+function ButtonSetUp(){
+	
+MW.setRightNavButton($.InfoButton);
+MW.setLeftNavButton($.BackButton) ; 	
+	
 }
 
+function NavButton(e){
+alert(e.title) ; 
+	
+	
+}
 function Look(){
 var LocText =	Alloy.Globals.SearchTerm ;
 alert(LocText);
@@ -14,11 +28,11 @@ alert(LocText);
 	
 	
 }
-
+/*
 function RestoreSearch(){
 // I'm going to fix this before release , but lets just see
 // using AlloyGlobal 
-var MW =  Alloy.Globals.TempWin ; 
+ MW =  Alloy.Globals.TempWin ; 
 	//var MW = $.Table.getView();
 	// the right way is going to be to Open one window, then close it . 
 // this works but its not what we're going to use ...'	
@@ -37,4 +51,8 @@ var MW =  Alloy.Globals.TempWin ;
 	// free up the Global 
 	Alloy.Globals.TempWin = null ; 
 	
+}*/
+// thanks aaron !
+exports.openMainWindow = function(_tab) {
+  _tab.open($.MusicTable);
 }

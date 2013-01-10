@@ -19,29 +19,32 @@ RanOnce = true ;
 function GenTable(){
 	
 	Alloy.Globals.SearchTerm  = $.Search.value ; 
-// going to try to add an XML controller , since thats the right way to do this , failing that we 
-// fall back to good ole Window.add 	
 
-//var ThisWin 
-	var NewTable = Alloy.createController('MusicTable').getView(); 
- 	alert('From Music Main' + $.Search.value) ;
+ 	
+ 	alert('Look For : ' + $.Search.value) ;
  	//NewTable.open();
  /// 
  // going to assume theirs a better way to do this ... 
- 	var allChildren  = 	$.MW.getChildren();
+ /*	var allChildren  = 	$.MW.getChildren();
  	for( var i = 0 ; i < allChildren.length ; i++ )
  	{
  	
  	allChildren[i].visible = false ;
  	// 	
  	}
- 	
- 	$.MW.add(NewTable) ; 
- 	Alloy.Globals.TempWin = $.MW ;
- 	// I'm going to fix this , I just need to run a check 
- 	//NewTable.openMainWindow($.MW);
- //$.MW.add( NewTable) ; 
-	// lets see
+ */
+ 	var NewTable = Alloy.createController('MusicTable') ; 
+ 	//var Tab2 = Titanium.UI.getCurrentTab();
+ 	// Titanium.UI.currentTabGroup.getActiveTab();//Titanium.UI.TabGroup.getActiveTab() ; 
+ 	// Alloy.Globals.Tab2 ; 
+ 	// again check to make sure we have this right !
+ 	 //tabGroup.activeTab
+ 	// Ti.Ui.T
+ 	alert(Alloy.Globals.Tab2.title) ; 
+ 	alert(Alloy.Globals.Tab2);
+	
+ 	NewTable.openMainWindow(Alloy.Globals.Tab2);
+
 	
 }
 /*

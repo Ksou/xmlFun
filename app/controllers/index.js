@@ -1,9 +1,17 @@
 $.index.open();
-// FYI Awake and Start are Terms used in Unity coding 
-function Awake(){
+// Going to keep it simply , onOpen calls onOpen 
+function onOpen(){
 // any prep work needed 	
+	//.openMainWindow($.tab_one);
+	Alloy.Globals.Tab2 = $.Tab2 ; 
+	alert(Alloy.Globals.Tab2.title);
+	
+	// 	var NewTable = Alloy.createController('MusicMain') ; 
+
+ 	//NewTable.openMainWindow($.Tab2);
 	
 	
+		// this just verifies that we have the correct tab 
 }
 
 

@@ -11,3 +11,5 @@
 // Alloy.Globals.someGlobalFunction = function(){};
 Alloy.Globals.SearchTerm = 'none' ;
 Alloy.Globals.TempWin ; 
+Alloy.Globals.Tab2 ;
+// so we can access this from anywhere 

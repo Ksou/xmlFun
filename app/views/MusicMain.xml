@@ -2,9 +2,9 @@
 	
 	
 			<Window title="MusicMain" id = 'MW' onFocus ="Start">
-				<Button onClick = "GenTable" top = "40"> </Button>
+				<Button onClick = "GenTable" top ="200" width = '100' height = '100'>  Search</Button>
 				<Label>Here we're going to show the table view '</Label>
-				<TextField id= 'Search'  width = '60' hintText = " Search Here "  top = "30">Search Here</TextField>
+				<TextField id= 'Search'  width = '80' hintText = " Search Here "  top = "30">Search Here</TextField>
 				<!-- Pushed down to help with debuging -->
 			</Window>
 	

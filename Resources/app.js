@@ -4,4 +4,6 @@ Alloy.Globals.SearchTerm = "none";
 
 Alloy.Globals.TempWin;
 
+Alloy.Globals.Tab2;
+
 Alloy.createController("index");

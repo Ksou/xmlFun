@@ -1,21 +1,10 @@
 <Alloy>
-	
-	
-		
-				<Label id = "Table" onClick = "RestoreSearch">
-					Generate test
+	<Window title = "MusicTable" id  = 'MusicTable'>
+
+				<TableView id = "Table" onClick = "RestoreSearch" onPostayout = 'PostLayout'>
+					 <TableViewRow title="Apple"/>
 					
-					</Label>
-		<!--
-			<Window title="About" id = 'About' >
-				<ScrollView showVerticalScrollIndicator="true" showHorizontalScrollIndicator="true" height="80%" width="80%">
-			
-				<Label>
-					Generate test
-					
-					</Label>
-				</ScrollView>
-			
-			</Window>
-				-->	
+					</TableView>
+
+				</Window>
 </Alloy>

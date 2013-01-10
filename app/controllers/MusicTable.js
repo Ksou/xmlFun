@@ -78,7 +78,7 @@ function  SongPlay(id){
 	}
 	//var tempString =  data[e.index].id;
  var Sounder = 'http://storage-new.newjamendo.com/download/track/'+id+'/mp32';
-Alloy.Globals.SongActive = Ti.Media.createAudioPlayer({url : Sounder});
+Alloy.Globals.SongActive = Ti.Media.createAudioPlayer({url : Sounder , allowBackground : true });
 		Alloy.Globals.SongActive.play() ;
 		
 }

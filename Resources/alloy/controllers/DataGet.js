@@ -1,5 +1,6 @@
 function Controller() {
-    function TableData(trackL, Table, callback) {
+    function TableData(trackL, callback) {
+        debugger;
         Alloy.Globals.Debug && alert("start table data");
         var url = "http://api.jamendo.com/get2/name+id+url+artist/track/json/?searchquery=" + trackL + "=searchweight_desc", xhr = Ti.Network.createHTTPClient({
             onload: function(e) {
@@ -9,9 +10,8 @@ function Controller() {
                 data.prop = "title";
                 data.prop = "SongLink";
                 for (var i = 0; i < data.length; i++) data[i].title = data[i].name;
-                Table.data = data;
-                Alloy.Globals.GotData = data;
-                callback.call(data);
+                debugger;
+                callback && callback(data);
             },
             onerror: function(e) {
                 Ti.API.debug(e.error);

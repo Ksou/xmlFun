@@ -10,4 +10,6 @@ Alloy.Globals.GotData;
 
 Alloy.Globals.Debug;
 
+Alloy.Globals.SongActive;
+
 Alloy.createController("index");

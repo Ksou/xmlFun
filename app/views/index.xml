@@ -1,24 +1,16 @@
 <Alloy>
 	<TabGroup >
 		<Tab title="Tab 1" icon="KS_nav_ui.png" id = 'Tab1'>
-			
-				
 			<Window title="Tab 1" onOpen = 'onOpen'>
 				<Label>Debug Switch , set this to on to see debug alerts .</Label>
-			 <Switch id="DebugSwitch" value="true" onChange="onChange" title = 'Debug' top = '240'/>
+				<Switch id="DebugSwitch" value="true" onChange="onChange" title = 'Debug' top = '240'/>
 			</Window>
 		</Tab>
 		<Tab title="Tab 2" icon="KS_nav_views.png" id = 'Tab2'>
 			<Require src="MusicMain"/>
-			
-
 		</Tab>
-		
 		<Tab title="About" icon="KS_nav_views.png" id = 'Tab3'>
-		
 			<Require src="About"/>
-			
-
 		</Tab>
 	</TabGroup>
 </Alloy>

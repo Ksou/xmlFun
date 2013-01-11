@@ -10,4 +10,14 @@
 		fontFamily: 'Helvetica Neue'
 	},
 	textAlign: 'center'
-} 
+}, 
+
+"TableViewRow" :{
+	color : "white"
+	
+	
+},
+"TableView" : {
+	backgroundColor : 'black',
+	seperatorColor : 'black'
+}

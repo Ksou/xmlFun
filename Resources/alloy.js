@@ -14,12 +14,12 @@ exports.Backbone = Backbone;
 
 exports.M = function(name, modelDesc, migrations) {
     var config = modelDesc.config, type = (config.adapter ? config.adapter.type : null) || "localDefault";
-    type === "localDefault" && (type = "sql");
+    type === "localDefault" && (type = "localStorage");
     var adapter = require("alloy/sync/" + type), extendObj = {
         defaults: config.defaults,
         sync: function(method, model, opts) {
             var config = model.config || {}, adapterObj = config.adapter || {}, type = (config.adapter ? config.adapter.type : null) || "localDefault";
-            type === "localDefault" && (type = "sql");
+            type === "localDefault" && (type = "localStorage");
             require("alloy/sync/" + type).sync(model, method, opts);
         }
     }, extendClass = {};
@@ -37,7 +37,7 @@ exports.C = function(name, modelDesc, model) {
         model: model,
         sync: function(method, model, opts) {
             var config = model.config || {}, type = (config.adapter ? config.adapter.type : null) || "localDefault";
-            type === "localDefault" && (type = "sql");
+            type === "localDefault" && (type = "localStorage");
             require("alloy/sync/" + type).sync(model, method, opts);
         }
     }, Collection = Backbone.Collection.extend(extendObj), config = Collection.prototype.config = model.prototype.config, type = (config.adapter ? config.adapter.type : null) || "localDefault", adapter = require("alloy/sync/" + type);
@@ -64,7 +64,7 @@ exports.A = function(t, type, parent) {
             };
             if (!cbs[e]) {
                 cbs[e] = {};
-                al(e, wcb);
+                al.call(t, e, wcb);
             }
             cbs[e][cb] = wcb;
             _.bind(oo, ctx, e, cb, context)();
@@ -76,7 +76,7 @@ exports.A = function(t, type, parent) {
                 delete cbs[e][cb];
                 if (cbs[e].length === 0) {
                     delete cbs[e];
-                    rl(e, f);
+                    rl.call(t, e, f);
                 }
                 f = null;
             }
@@ -126,7 +126,7 @@ exports.createCollection = function(name, args) {
 };
 
 exports.isTablet = function() {
-    return Ti.Platform.osname === "ipad";
+    return !(Math.min(Ti.Platform.displayCaps.platformHeight, Ti.Platform.displayCaps.platformWidth) < 400);
 }();
 
 exports.isHandheld = !exports.isTablet;

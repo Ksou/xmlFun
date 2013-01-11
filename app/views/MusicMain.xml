@@ -1,11 +1,10 @@
 <Alloy>
-	
-	
-			<Window title="Music Search" id = 'MW' >
-				<Button onClick = "GenTable" top ="230" width = '100' height = '100'>  Search</Button>
-				<Label>Here we search for music </Label>
-				<TextField id= 'Search'  width = '80' hintText = " Search Here "  top = "30">Search Here</TextField>
-				<!-- Pushed down to help with debuging -->
-			</Window>
-	
+
+	<Window title="Music Search" id = 'MW' >
+		<Button onClick = "GenTable" top ="230" width = '100' height = '100'>Search</Button>
+		<Label>Here we search for music</Label>
+		<TextField id= 'Search'  width = '80' hintText = " Search Here "  top = "30">Search Here</TextField>
+		<!-- Pushed down to help with debuging -->
+	</Window>
+
 </Alloy>
